@@ -59,6 +59,13 @@ public class StartApp {
                     id = Integer.parseInt(reader.readLine());
                     userService.deleteUserById(id);
                     System.out.println(serviceMenu);
+                    break;
+                case "exit":
+                    break;
+                default:
+                    System.out.println("There is no option like this " + "\"" + choose + "\"" + ". Try again: ");
+                    System.out.println(serviceMenu);
+                    break;
             }
         } while (!choose.equals("exit"));
         System.out.println("Thank you for using CRUD app! Have a good day!");
